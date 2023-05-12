@@ -22,11 +22,11 @@ class SheetController extends Controller
 
         $spreadsheetId = '1jJhWXqMN4dFaUiS-bkiQ9pEXPUFPzy-n7LMcn60r5LA';
 
-        $range = 'Sheet1!D1:E5';
+        $range = 'Sheet1!D1:E1';
         $response = $sheets->spreadsheets_values->get($spreadsheetId, $range);
-        dd($response);
-        $values = $response->getValues();
 
+        $values = $response->getValues();
+        dd($values);
     }
      public function sheet2(){
         $client = new GoogleClient();
