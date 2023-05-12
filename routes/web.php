@@ -44,6 +44,7 @@ Route::group([
     Route::get('/dashboard', [AdminController::class,'index'])->name('admin.dashboard');
     Route::get('/profile', [AdminController::class,'edit'])->name('admin-profile');
     Route::get('/sheets', [SheetController::class,'index'])->name('google.sheet');
+    Route::get('/sheets2', [SheetController::class,'sheet2'])->name('google.sheet2');
     Route::get('/logout', [AdminController::class,'logout'])->name('admin-logout');
     Route::post('/admin-update', [AdminController::class,'update'])->name('admin-update');
 
