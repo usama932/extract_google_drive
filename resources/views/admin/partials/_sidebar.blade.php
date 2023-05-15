@@ -218,7 +218,7 @@
 
                     <!--end:Menu sub-->
                 </a>
-                <a href="{{route("google.sheet")}}"
+                <a href="{{route("vans.index")}}"
                 class="menu-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'users') here @endif">
                  <!--begin:Menu link-->
                  <span class="menu-link">

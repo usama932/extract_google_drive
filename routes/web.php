@@ -19,8 +19,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SheetController;
-use App\Http\Controllers\Admin\CategoriesController;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\VanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -62,13 +61,11 @@ Route::group([
     Route::get('users/delete/{id}', [UserController::class,'destroy'])->name('user-delete');
     Route::post('delete-selected-users', [UserController::class,'deleteSelectedUsers'])->name('delete-selected-users');
 
-//    //Category Routes
-//    Route::resource('categories',CategoriesController::class);
-//    Route::get('categories/edit/{id}', [CategoriesController::class,'edit'])->name('admin-categories-edit');
-//    Route::post('get-categories', [CategoriesController::class,'getCategories'])->name('admin-getAddedCategories');
-//    Route::get('categories/delete/{id}', [CategoriesController::class,'destroy'])->name('admin-categories-delete');
-//    Route::post('delete-selected-categories', [CategoriesController::class,'DeleteSelectedCategories'])->name('delete-selected-categories');
-//    Route::post('categories/detail', [CategoriesController::class,'getCategoryDetail'])->name('admin-getCategories');
     //Vans
     Route::resource('vans',VanController::class);
+    Route::get('vans/edit/{id}', [VanController::class,'edit'])->name('admin-van');
+    Route::post('get-vans', [VanController::class,'getVans'])->name('admin.getVans');
+    Route::post('get-van', [VanController::class,'vanDetail'])->name('admin.getVan');
+    Route::get('vans/delete/{id}', [VanController::class,'destroy'])->name('van-delete');
+    Route::post('delete-selected-vans', [VanController::class,'deleteSelectedVans'])->name('delete-selected-vans');
 });
