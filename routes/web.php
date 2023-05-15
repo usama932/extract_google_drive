@@ -69,5 +69,6 @@ Route::group([
 //    Route::get('categories/delete/{id}', [CategoriesController::class,'destroy'])->name('admin-categories-delete');
 //    Route::post('delete-selected-categories', [CategoriesController::class,'DeleteSelectedCategories'])->name('delete-selected-categories');
 //    Route::post('categories/detail', [CategoriesController::class,'getCategoryDetail'])->name('admin-getCategories');
-
+    //Vans
+    Route::resource('vans',VanController::class);
 });
