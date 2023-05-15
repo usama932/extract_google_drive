@@ -5,6 +5,7 @@ use Illuminate\Console\Command;
 use Google\Client as GoogleClient;
 use App\Models\SoldLead;
 use Google\Service\Sheets as GoogleSheets;
+use Illuminate\Support\Facades\DB;
 
 class DailyQuote extends Command
 {
